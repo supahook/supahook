@@ -8,6 +8,8 @@ abstract class XWebhook {
     auth : XAuth | undefined;
     created_at: number = 0;
     updated_at: number = 0;
+    retry: boolean = false;
+    delay_before_forward: number = 0;
 
     constructor(name: string, logo: string) {
         this.name = name;

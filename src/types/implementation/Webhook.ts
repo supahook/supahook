@@ -27,7 +27,7 @@ class Webhook extends XWebhook { // db
     // Get calls associated to this Webhook
     async getCalls(): Promise<[Call]> {
 
-        return [new Call()];
+        return [new Call('original', '', '', 'GET', '', '', '', 0)];
     }
 
     // Get all Webhooks

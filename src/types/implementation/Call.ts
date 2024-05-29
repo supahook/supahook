@@ -1,14 +1,13 @@
 import XCall from "../abstract/XCall";
 
 class Call extends XCall { // db
-    // id
-    // Webhook (index)
-    // headers
-    // method
-    // url
-    // client
-    // body
-    // timestamp
+    async forward(): Promise<void> {
+
+    };
+
+    async replay(): Promise<void> {
+        
+    };
 }
 
 export default Call;

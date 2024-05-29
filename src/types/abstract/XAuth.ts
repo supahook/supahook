@@ -1,15 +1,15 @@
 import XCall from "./XCall";
 
 abstract class XAuth {
-    type: string; //'API_KEY', 'BASIC', 'BEARER', 'HMAC', 'OAUTH', "MTLS"
+    type: "api_key" | "basic" | "bearer" | "hmac" | "oauth" | "mtls";
     ip_whitelistening: boolean = false;
     rate_limit_per_hour: number = 0;
     security_guard: boolean = false;
-    auth_position: string = "header";
+    auth_position: "headers" | "query" = "headers";
     auth_name: string;
     auth_value: string;
 
-    constructor(type: string, auth_name: string, auth_value: string, auth_position?: string) {
+    constructor(type: "api_key" | "basic" | "bearer" | "hmac" | "oauth" | "mtls", auth_name: string, auth_value: string, auth_position?: "headers" | "query") {
         this.type = type;
         this.auth_name = auth_name;
         this.auth_value = auth_value;

@@ -8,7 +8,7 @@ class Auth extends XAuth { // no db
     }
 
     static fromObject(data: object) : Auth {
-        return new Auth('', '', '');
+        return new Auth('api_key', '', '');
     }
 }
 
